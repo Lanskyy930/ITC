@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Program</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="top-nav" aria-label="Main Navigation">
+            <a href="main.html" class="back-link">&larr; Main Menu</a>
+        </nav>
+        <h1>Looping Program</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Input Integer (N)</h2>
+            <div class="input-group">
+                <label for="loop-number">Enter a positive integer (n)</label>
+                <input type="number" id="loop-number" min="1" step="1" inputmode="numeric" placeholder="e.g. 5">
+            </div>
+            <button type="button" class="btn" id="compute-loop-btn">Compute</button>
+        </section>
+
+        <section class="card">
+            <h2>Results</h2>
+            <div class="input-group">
+                <label for="factorial-result">Nth Factorial (While Loop)</label>
+                <input type="text" id="factorial-result" class="output-box" readonly>
+            </div>
+            <div class="input-group">
+                <label for="sum-result">Sum of First N Numbers (Do-While Loop)</label>
+                <input type="text" id="sum-result" class="output-box" readonly>
+            </div>
+            <div class="input-group">
+                <label for="average-result">Average of First N Numbers (For Loop)</label>
+                <input type="text" id="average-result" class="output-box" readonly>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

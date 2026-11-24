@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="top-nav" aria-label="Main Navigation">
+            <a href="main.html" class="back-link">&larr; Main Menu</a>
+        </nav>
+        <h1>Unit Conversions</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="input-group">
+                <label for="conversion-select">Choose Conversion</label>
+                <select id="conversion-select" name="conversion-select">
+                    <option value="c-to-f">Celsius to Fahrenheit</option>
+                    <option value="f-to-c">Fahrenheit to Celsius</option>
+                    <option value="m-to-ft">Meters to Feet</option>
+                    <option value="ft-to-m">Feet to Meters</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="card conversion-panel" data-conversion="c-to-f">
+            <h2>Celsius to Fahrenheit</h2>
+            <div class="input-group">
+                <label for="celsius-input">Celsius (°C)</label>
+                <input type="number" id="celsius-input" step="any" placeholder="Enter °C">
+            </div>
+            <button type="button" class="btn" id="btn-c-to-f">Convert</button>
+            <div class="input-group">
+                <label for="celsius-result">Result (°F)</label>
+                <input type="text" id="celsius-result" class="output-box" readonly>
+            </div>
+        </section>
+
+        <section class="card conversion-panel" data-conversion="f-to-c" hidden>
+            <h2>Fahrenheit to Celsius</h2>
+            <div class="input-group">
+                <label for="fahrenheit-input">Fahrenheit (°F)</label>
+                <input type="number" id="fahrenheit-input" step="any" placeholder="Enter °F">
+            </div>
+            <button type="button" class="btn" id="btn-f-to-c">Convert</button>
+            <div class="input-group">
+                <label for="fahrenheit-result">Result (°C)</label>
+                <input type="text" id="fahrenheit-result" class="output-box" readonly>
+            </div>
+        </section>
+
+        <section class="card conversion-panel" data-conversion="m-to-ft" hidden>
+            <h2>Meters to Feet</h2>
+            <div class="input-group">
+                <label for="meters-input">Meters (m)</label>
+                <input type="number" id="meters-input" step="any" placeholder="Enter meters">
+            </div>
+            <button type="button" class="btn" id="btn-m-to-ft">Convert</button>
+            <div class="input-group">
+                <label for="meters-result">Result (ft)</label>
+                <input type="text" id="meters-result" class="output-box" readonly>
+            </div>
+        </section>
+
+        <section class="card conversion-panel" data-conversion="ft-to-m" hidden>
+            <h2>Feet to Meters</h2>
+            <div class="input-group">
+                <label for="feet-input">Feet (ft)</label>
+                <input type="number" id="feet-input" step="any" placeholder="Enter feet">
+            </div>
+            <button type="button" class="btn" id="btn-ft-to-m">Convert</button>
+            <div class="input-group">
+                <label for="feet-result">Result (m)</label>
+                <input type="text" id="feet-result" class="output-box" readonly>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

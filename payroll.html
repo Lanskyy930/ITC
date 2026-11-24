@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Program</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="top-nav" aria-label="Main Navigation">
+            <a href="main.html" class="back-link">&larr; Main Menu</a>
+        </nav>
+        <h1>Payroll Program</h1>
+    </header>
+
+    <main class="container container-wide">
+        <section class="card">
+            <h2>Add Employee</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="employee-name">Employee Name</label>
+                    <input type="text" id="employee-name" placeholder="e.g. Juan Dela Cruz">
+                </div>
+                <div class="input-group">
+                    <label for="employee-days">Days Worked</label>
+                    <input type="number" id="employee-days" min="0" step="any" placeholder="e.g. 15">
+                </div>
+                <div class="input-group">
+                    <label for="employee-rate">Daily Rate (PHP)</label>
+                    <input type="number" id="employee-rate" min="0" step="any" placeholder="e.g. 600">
+                </div>
+                <div class="input-group">
+                    <label for="employee-deduction">Deduction Amount (0 if none)</label>
+                    <input type="number" id="employee-deduction" min="0" step="any" value="0">
+                </div>
+            </div>
+            <button type="button" class="btn" id="add-employee-btn">Add Employee</button>
+        </section>
+
+        <section class="card">
+            <h2>Payroll List</h2>
+            <div class="table-wrapper">
+                <table class="payroll-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Employee Name</th>
+                            <th>Days Worked</th>
+                            <th>Daily Rate</th>
+                            <th>Gross Pay</th>
+                            <th>Deduction Amount</th>
+                            <th>Net Pay</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="payroll-tbody">
+                        <tr class="empty-row">
+                            <td colspan="8">No employees added yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
